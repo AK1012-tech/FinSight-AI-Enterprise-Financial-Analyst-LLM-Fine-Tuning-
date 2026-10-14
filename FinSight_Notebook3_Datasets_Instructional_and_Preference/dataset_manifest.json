@@ -1,0 +1,44 @@
+{
+  "project": "FinSight AI",
+  "purpose": "Synthetic post-DAPT datasets for Notebook 3: SFT and DPO",
+  "sft_examples": 200,
+  "dpo_examples": 100,
+  "sft_categories": {
+    "financial_question_answering": 25,
+    "financial_analysis": 25,
+    "ratio_calculation": 25,
+    "earnings_analysis": 25,
+    "risk_identification": 25,
+    "financial_document_summarization": 25,
+    "comparative_analysis": 25,
+    "structured_analyst_response": 25
+  },
+  "dpo_fields": [
+    "prompt",
+    "chosen",
+    "rejected"
+  ],
+  "source_corpus": "FinSight synthetic financial domain corpus: 12 fictional company documents.",
+  "companies": [
+    "Meridian Crest Bank Holdings, Inc.",
+    "FinoraPay Technologies, Inc.",
+    "Summit Arc Asset Management plc"
+  ],
+  "important_note": "All companies, values and disclosures are fictional/synthetic and intended for ML portfolio demonstration. They are not real filings or investment advice.",
+  "preference_design": [
+    "Chosen responses are grounded in supplied evidence.",
+    "Chosen responses show calculations when relevant.",
+    "Chosen responses distinguish reported facts from management interpretation.",
+    "Rejected responses contain plausible but identifiable errors such as wrong arithmetic, unsupported causality, false certainty, or invalid metric comparison."
+  ],
+  "dpo_category_counts": {
+    "earnings_analysis": 13,
+    "financial_question_answering": 13,
+    "ratio_calculation": 13,
+    "financial_analysis": 13,
+    "financial_document_summarization": 12,
+    "structured_analyst_response": 12,
+    "risk_identification": 12,
+    "comparative_analysis": 12
+  }
+}

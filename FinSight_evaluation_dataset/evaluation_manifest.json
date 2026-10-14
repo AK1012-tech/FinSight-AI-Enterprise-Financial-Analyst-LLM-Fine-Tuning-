@@ -1,0 +1,41 @@
+{
+  "purpose": "External financial benchmark evaluation, kept separate from FinSight training corpus.",
+  "recommended_benchmarks": [
+    {
+      "name": "FinQA",
+      "recommended_split": "test",
+      "notes": "Use the public test split with references for local evaluation. Do not train on the test split.",
+      "source": "https://github.com/czyssrs/FinQA",
+      "huggingface": "https://huggingface.co/datasets/ibm-research/finqa"
+    },
+    {
+      "name": "ConvFinQA",
+      "recommended_split": "test.json or test_turn.json",
+      "notes": "Use conversation-level evaluation for multi-turn behavior or turn-level evaluation for individual questions.",
+      "source": "https://github.com/czyssrs/ConvFinQA"
+    },
+    {
+      "name": "TAT-QA",
+      "recommended_split": "test",
+      "notes": "Use the official test set and evaluation script.",
+      "source": "https://github.com/NExTplusplus/TAT-QA"
+    },
+    {
+      "name": "FiQA",
+      "recommended_split": "official evaluation/test split",
+      "notes": "Preserve the benchmark's original evaluation protocol.",
+      "source": "https://sites.google.com/view/fiqa/"
+    }
+  ],
+  "custom_test": {
+    "name": "FinSight Custom Financial Test Set",
+    "count": 50,
+    "source_documents": [
+      "aurora_grid_renewables_2026_q2.pdf",
+      "northstar_insurance_group_2026_q2.pdf",
+      "vertex_industrial_automation_2026_q2.pdf"
+    ],
+    "training_overlap": false,
+    "notes": "All questions use three new fictional held-out documents, separate from the 12 training PDFs."
+  }
+}
